@@ -33,7 +33,7 @@
   <!-- break -------------------------->
   <div class="row">
     <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">Element 1
-      <div class="image-container position-relative" onclick="this.closest('.image-container').querySelector('.play-pause').click();">
+      <div class="image-container position-relative">
         <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
         <div class="overlay d-flex align-items-center justify-content-center">
           <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
@@ -53,7 +53,7 @@
       </h2>
     </div>
     <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">
-      <div class="image-container position-relative" onclick="this.closest('.image-container').querySelector('.play-pause').click();">
+      <div class="image-container position-relative">
         <img src="https://book.stevejobsarchive.com/photos/photo-19~1500.webp" alt="Image"
           class="card-img-top rounded-20 fade-in">
         <div class="overlay d-flex align-items-center justify-content-center">
@@ -221,6 +221,12 @@
       });
     </script>
     <script>
+      document.querySelectorAll('.image-container').forEach(container => {
+        container.addEventListener('click', (event) => {
+          const button = container.querySelector('.play-pause');
+          button.click();
+        });
+      });
       // Query all play-pause buttons
       const playPauseButtons = document.querySelectorAll('.play-pause');
 
