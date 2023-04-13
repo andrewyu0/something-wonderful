@@ -64,6 +64,15 @@ body {
   transition: opacity 0.5s;
 }
 
+.image-container.image-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.image-container.image-card:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 .image-container:hover .overlay {
   opacity: 1;
 }
@@ -112,4 +121,12 @@ footer {
   60% {
     transform: translateY(-5px);
   }
+}
+.image-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
