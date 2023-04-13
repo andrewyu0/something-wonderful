@@ -34,23 +34,6 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.wiggle {
-  /* transition: transform 0.3s ease; */
-  /* transition: all 1s ease; Smooth animation */
-
-}
-
-.wiggle:hover {
-  /* transform: scale(1.05); */
-  /* position: absolute; /* Break out of parent's constraints */
-  /* width: 100vw; */
-  /* Fill viewport width */
-  /* height: 100vh; */
-  /* Fill viewport height */
-  /* transition: all 1s ease; */
-  /* Smooth animation */ 
-
-}
 
 .fade-in {
   opacity: 0;

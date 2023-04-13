@@ -206,21 +206,64 @@
         });
       </script>
       <script>
+        // const playPauseButtons = document.querySelectorAll('.play-pause');
+        // playPauseButtons.forEach(button => {
+        //   button.addEventListener('click', () => {
+        //     const audioId = button.getAttribute('data-audio');
+        //     const audio = document.getElementById(audioId);
+
+        //     if (audio.paused) {
+        //       audio.play();
+        //       button.textContent = 'Pause';
+        //     } else {
+        //       audio.pause();
+        //       button.textContent = 'Play';
+        //     }
+        //   });
+        // });
         const playPauseButtons = document.querySelectorAll('.play-pause');
         playPauseButtons.forEach(button => {
           button.addEventListener('click', () => {
             const audioId = button.getAttribute('data-audio');
             const audio = document.getElementById(audioId);
 
-            if (audio.paused) {
+            if (audio.paused && audio.currentTime >= 0 && !audio.ended) {
               audio.play();
               button.textContent = 'Pause';
+              button.classList.toggle('playing');
+              progress(button, audio);
             } else {
               audio.pause();
               button.textContent = 'Play';
+              button.classList.toggle('playing');
+              reset(button, audio);
             }
           });
         });
+
+        function reset(btn, song) {
+          if (btn.classList.contains('playing')) {
+            btn.classList.toggle('playing');
+          }
+          song.pause();
+          song.currentTime = 0;
+        }
+
+        function progress(btn, song) {
+          setTimeout(function () {
+            var end = song.duration;
+            var current = song.currentTime;
+            var percent = current / (end / 100);
+            //check if song is at the end
+            if (current == end) {
+              reset(btn, song);
+            }
+            //set inset box shadow
+            btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+            //call function again
+            progress(btn, song);
+          }, 133.7);
+        }
       </script>
       <script src="/scripts.js"></script>
 </body>
