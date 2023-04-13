@@ -39,7 +39,9 @@ body {
 }
 
 .wiggle:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
+  width: 100vw; /* Fill viewport width */
+      height: 100vh; /* Fill viewport height */
 }
 
 .fade-in {
