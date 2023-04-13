@@ -7,14 +7,14 @@
   <title>SOMETHINGWONDERFUL</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/style.css?v=15">
+  <link rel="stylesheet" href="/style.css?v=21">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <input type="range" id="volumeControl" min="0" max="100" step="1" value="50">
+  <input type="range" id="volumeControl" min="0" max="100" step="1" value="50" oninput="updateSliderBackground(this)">
   <audio id="backgroundAudio" src="https://somethingwonderful123.s3.amazonaws.com/Both+Sides+Now+(Instrumental).mp3"
     loop></audio>
   <div class="container">
@@ -221,6 +221,11 @@
       });
     </script>
     <script>
+      /*
+      With this code, you add a single event listener to each `.image-container` div. 
+      When the div is clicked, it triggers the click event on the play-pause button inside it. 
+      This approach eliminates the need for `onclick` attributes in the HTML and makes the code more elegant.
+      */
       document.querySelectorAll('.image-container').forEach(container => {
         container.addEventListener('click', (event) => {
           const button = container.querySelector('.play-pause');
@@ -291,7 +296,14 @@
           progress(btn, song);
         }, 133.7);
       }
-
+      function updateSliderBackground(slider) {
+        const percentage = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+        slider.style.background = `linear-gradient(to right, #3b98fd ${percentage}%, #ccc ${percentage}%)`;
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        const volumeControl = document.getElementById('volumeControl');
+        updateSliderBackground(volumeControl);
+      });
     </script>
     <script src="/scripts.js"></script>
 </body>
