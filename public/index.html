@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMETHINGWONDERFUL</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      body {background-color: black;}
+
+        .rounded-20 {
+            border-radius: 20px;
+        }
+        .wiggle {
+            transition: transform 0.3s ease;
+        }
+        .wiggle:hover {
+            transform: scale(1.05);
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 4s ease-in;
+        }
+        .visible {
+          opacity: 1 !important;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+        .footer-link {
+            flex: 1;
+            text-align: center;
+        }
+        .mb-custom {
+          margin-bottom: 5rem !important;
+        }
+        footer {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+      <h1 class="my-5 text-center">SOMETHINGWONDERFUL</h1>
+      <p class="lead text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod est in justo vulputate, eget porttitor quam tincidunt. Integer vel odio eget arcu consectetur.</p>
+
+      <div class="row">
+          <!-- Add more columns for each image with the same structure as above -->
+          <div class="col-md-12 mb-custom">
+            <div class="card wiggle mb-custom">
+                <div class="image-container position-relative">
+                    <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top rounded-20 fade-in">
+                    <div class="overlay d-flex align-items-center justify-content-center">
+                        <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-custom">
+              <div class="card wiggle mb-custom">
+                  <div class="image-container position-relative">
+                      <img src="https://book.stevejobsarchive.com/photos/photo-14~1500.webp" alt="Image" class="card-img-top rounded-20 fade-in">
+                      <div class="overlay d-flex align-items-center justify-content-center">
+                          <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-12 mb-custom">
+                <div class="card wiggle mb-custom">
+                    <div class="image-container position-relative">
+                        <img src="https://book.stevejobsarchive.com/photos/photo-14~1500.webp" alt="Image" class="card-img-top rounded-20 fade-in">
+                        <div class="overlay d-flex align-items-center justify-content-center">
+                            <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+      </div>
+  </div>
+
+  <audio id="audio-1" src="https://somethingwonderful123.s3.amazonaws.com/blaze+best.mp3"></audio>
+  <!-- Add more audio elements for each image with unique IDs -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+      return (
+        rect.top >= 0 &&
+        rect.top <= windowHeight * 0.5 &&
+        rect.bottom >= windowHeight * 0.5
+      );
+    }
+
+    function fadeInOnScroll() {
+      $('.fade-in').each(function() {
+        if (isElementInViewport(this)) {
+          $(this).addClass('visible');
+        }
+      });
+    }
+
+    $(window).on('scroll', fadeInOnScroll);
+    fadeInOnScroll(); // Call the function once on page load to handle elements already in the viewport
+  });
+  </script>
+  <script>  
+    const playPauseButtons = document.querySelectorAll('.play-pause');
+      playPauseButtons.forEach(button => {
+          button.addEventListener('click', () => {
+              const audioId = button.getAttribute('data-audio');
+              const audio = document.getElementById(audioId);
+
+              if (audio.paused) {
+                  audio.play();
+                  button.textContent = 'Pause';
+              } else {
+                  audio.pause();
+                  button.textContent = 'Play';
+              }
+          });
+      });
+  </script>
+</body>
+</html>
