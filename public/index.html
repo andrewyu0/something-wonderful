@@ -16,13 +16,32 @@
       left: 5px;
       z-index: 999;
     }
+    #volumeControl {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: #ccc;
+    outline: none;
+  }
+  #volumeControl::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #444;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  #volumeControl::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #444;
+    cursor: pointer;
+    border-radius: 50%;
+  }
 
     body {
       background-color: black;
-    }
-
-    .rounded-20 {
-      border-radius: 20px;
     }
 
     .wiggle {
@@ -35,7 +54,7 @@
 
     .fade-in {
       opacity: 0;
-      transition: opacity 4s ease-in;
+      transition: opacity 2s ease-in;
     }
 
     .visible {
@@ -172,8 +191,8 @@
             const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
             return (
               rect.top >= 0 &&
-              rect.top <= windowHeight * 0.5 &&
-              rect.bottom >= windowHeight * 0.5
+              rect.top <= windowHeight * 0.7 &&
+              rect.bottom >= windowHeight * 0.3
             );
           }
 
