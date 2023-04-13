@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOMETHINGWONDERFUL</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/style.css?v=22">
+  <link rel="stylesheet" href="/style.css?v=24">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body>
   <div class="container">
     <input type="range" id="volumeControl" min="0" max="100" step="1" value="50" oninput="updateSliderBackground(this)">
@@ -29,8 +31,6 @@
       </div>
     </div>
     <!-- break 🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡🟡-------------------------->
-    <!-- break -------------------------->
-    <!-- break -------------------------->
     <div class="row">
       <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">Element 1
         <div class="image-container position-relative">
@@ -243,7 +243,8 @@
       const playPauseButtons = document.querySelectorAll('.play-pause');
       // Add event listeners to each play-pause button
       playPauseButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
+          event.stopPropagation(); // Added line to stop event propagation
           const audioId = button.getAttribute('data-audio');
           const audio = document.getElementById(audioId);
           // Toggle play/pause state and update button appearance
@@ -308,4 +309,5 @@
     </script>
     <script src="/scripts.js"></script>
 </body>
+
 </html>
