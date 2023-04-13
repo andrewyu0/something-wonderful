@@ -10,51 +10,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+  <script src="/scripts.js"></script>
 </head>
 
 <body>
-  <!-- <audio id="backgroundAudio" src="https://somethingwonderful123.s3.amazonaws.com/Both+Sides+Now+(Instrumental).mp3"
-    loop></audio> -->
-
-  <!-- <script>
-    const audio = document.getElementById('backgroundAudio');
-    audio.volume = 0.3;
-
-    function playAudio() {
-      audio.play();
-      document.removeEventListener('click', playAudio);
-      document.removeEventListener('touchstart', playAudio);
-    }
-
-    document.addEventListener('click', playAudio);
-    document.addEventListener('touchstart', playAudio);
-  </script> -->
-
   <input type="range" id="volumeControl" min="0" max="100" step="1" value="50">
   <audio id="backgroundAudio" src="https://somethingwonderful123.s3.amazonaws.com/Both+Sides+Now+(Instrumental).mp3"
     loop></audio>
-
-  <script>
-    const audio = document.getElementById('backgroundAudio');
-    audio.volume = 0.2;
-    document.getElementById('volumeControl').value = audio.volume * 100;
-
-
-    function playAudio() {
-      audio.play();
-      document.removeEventListener('click', playAudio);
-      document.removeEventListener('touchstart', playAudio);
-    }
-
-    document.getElementById('volumeControl').addEventListener('input', function (event) {
-      audio.volume = event.target.value / 100;
-    });
-
-    document.addEventListener('click', playAudio);
-    document.addEventListener('touchstart', playAudio);
-  </script>
-
   <div class="container">
     <h1 class="my-5 text-center">SOMETHINGWONDERFUL</h1>
     <p class="lead text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod est in justo
