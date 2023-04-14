@@ -1,7 +1,8 @@
 #volumeControl {
   position: fixed;
-  top: 10px;
-  left: 5px;
+  top: 10px; /* Adjust this value to position the control vertically */
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
   width: 100px;
   -webkit-appearance: none;
@@ -10,8 +11,8 @@
   background: #ccc;
   outline: none;
   border-radius: 2px;
-  /* Changed: added border-radius */
 }
+
 
 #volumeControl::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -53,10 +54,14 @@ body {
 }
 
 .fade-in {
-  opacity: 0;
+  opacity: 0; 
   transition: opacity 2.3s ease-in;
 }
 
+.fade-in-fast {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
 .visible {
   opacity: 1 !important;
 }
@@ -95,7 +100,7 @@ body {
 }
 
 .mb-custom {
-  margin-bottom: 5rem !important;
+  margin-bottom: 2rem !important;
 }
 
 footer {
@@ -154,4 +159,13 @@ footer {
 
 .image-card:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 20, 0.15);
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+.visible {
+  opacity: 1;
 }
