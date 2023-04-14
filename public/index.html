@@ -44,618 +44,626 @@
 
   <div class="container">
     <!-- MUSIC SLIDER -->
-    <div class="col-8 mx-auto">
-      <input type="range" id="volumeControl" min="0" max="100" step="1" value="50"
-        oninput="updateSliderBackground(this)">
+    <div class="col-12 col-8 mx-auto">
+      <input type="range" id="volumeControl" min="0" max="100" step="1" value="50" oninput="updateSliderBackground(this)">
       <audio id="backgroundAudio" src="https://somethingwonderful123.s3.amazonaws.com/Both+Sides+Now+(Instrumental).mp3"
         loop>
       </audio>
     </div>
-
+  
     <!--  APP STARTS HERE -->
     <div class="container">
       <!--  HANDWRITTEN VIDEO -->
       <div class="row">
-        <div class="col-8 mx-auto">
+        <div class="col-12 col-md-8 mx-auto">
           <div class="embed-responsive embed-responsive-4by3">
-            <video class="embed-responsive-item" autoplay muted loop>
-              <source src="https://somethingwonderful123.s3.amazonaws.com/steve/wonderful-handwritten-vid.mp4"
-                type="video/mp4">
+            <video class="embed-responsive-item" autoplay muted loop playsinline>
+              <source src="https://somethingwonderful123.s3.amazonaws.com/trim.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
       </div>
+        <div class="col-8 mx-auto mb-custom">
+          <h1 class="my-5 text-center">Something <br>Wonderful.</h1>
+          <p class="lead text-center mb-5">
+            A human-AI collaboration tribute to Steve Jobs, in the continued spirit of the <a
+              href="https://book.stevejobsarchive.com/" target="_blank">Steve Jobs Archive</a>.
+          </p>
+          <div class="chevron-container">
+            <div class="chevron-text">Tap images to play audio</div>
+            <br>
+            <div class="chevron"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CARDS START HERE -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">Element 1
+        <h2> ===== music </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-21~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="music">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- break   -------------------------->
+    <div class="row">
       <div class="col-8 mx-auto mb-custom">
-        <h1 class="my-5 text-center">Something <br>Wonderful.</h1>
-        <p class="lead text-center mb-5">
-          A human-AI collaboration tribute to Steve Jobs, in the continued spirit of the <a
-            href="https://book.stevejobsarchive.com/" target="_blank">Steve Jobs Archive</a>.
-        </p>
-        <div class="chevron-container">
-          <div class="chevron-text">Tap images to play audio</div>
-          <br>
-          <div class="chevron"></div>
+        <img src="https://somethingwonderful123.s3.amazonaws.com/steve/wonderful-handwritten-white.png"
+          style="max-width: 60%; height: auto; display: block; margin: 0 auto; padding-top:10px;" class="lazy-load">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> ===== rainbow full </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="rainbow-full">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- CARDS START HERE -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">Element 1
-      <h2> ===== music </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-21~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="music">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break   -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> ===== golden age </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="golden">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break   -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <img src="https://somethingwonderful123.s3.amazonaws.com/steve/wonderful-handwritten-white.png"
-        style="max-width: 60%; height: auto; display: block; margin: 0 auto; padding-top:10px;" class="lazy-load">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> ===== rainbow full </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="rainbow-full">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break   -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> ===== golden age </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="golden">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break   -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> ===== golden age </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="golden">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> conjureres booth ===== </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="generation">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break   -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> ===== golden age </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="golden">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break  -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> story ================== </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-21~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="story">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> conjureres booth ===== </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="generation">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> Excellence aristotle. </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="excellence">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break  -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> story ================== </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-21~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="story">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break   -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> Don't be a career. </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="career">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> Excellence aristotle. </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="excellence">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break   -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> Meet the right people. </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-34~1500.webp" alt="" class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="meet">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break   -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> Don't be a career. </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="career">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break   -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom">
+        <h2> Starting Apple </h2>
+        <div class="image-container position-relative image-card">
+          <img src="https://somethingwonderful123.s3.amazonaws.com/woz.png"
+            alt="A poem sent to a friend in 1974: Don't waste your life." class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="starting-apple">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break   -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> Meet the right people. </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-34~1500.webp" alt="" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="meet">
-            <i class="fas fa-volume-up"></i>
-          </button>
+    <!-- break   -------------------------->
+    <div class="row">
+      <h2>POEM POEM POEM </h2>
+      <div class="col-8 mx-auto mb-custom">
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-42~1500.webp"
+            alt="A poem sent to a friend in 1974: Don't waste your life." class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="poem">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break   -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom">
-      <h2> Starting Apple </h2>
-      <div class="image-container position-relative image-card">
-        <img src="https://somethingwonderful123.s3.amazonaws.com/woz.png"
-          alt="A poem sent to a friend in 1974: Don't waste your life." class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="starting-apple">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- break   -------------------------->
-  <div class="row">
-    <h2>POEM POEM POEM </h2>
-    <div class="col-8 mx-auto mb-custom">
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-42~1500.webp"
-          alt="A poem sent to a friend in 1974: Don't waste your life." class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="poem">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- break   -------------------------->
+    <!-- break   -------------------------->
 
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-8 mx-auto">
-      <h2>the next memo A memo from Steve Jobs on the value of the individual contributor when given uninterrupted
-        time to craft quality products.
-      </h2>
-    </div>
-    <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">
-      <div class="image-container position-relative image-card">
-        <img src="https://book.stevejobsarchive.com/photos/photo-19~1500.webp" alt="Image"
-          class="card-img-top rounded-20 fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <div class="col-md-6">
-            <button class="btn btn-light btn-lg btn-block play-pause" data-audio="next-memo">
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
               <i class="fas fa-volume-up"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break   -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">Element 1
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
-          class="card-img-top fade-in image-card">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- break   -------------------------->
-  <!-- break -------------------------->
-  <div class="row">
-    <div class="col-8 mx-auto">
-      <h2>the next memo A memo from Steve Jobs on the value of the individual contributor when given uninterrupted
-        time to craft quality products.
-      </h2>
-    </div>
-    <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-19~1500.webp" alt="Image"
-          class="card-img-top rounded-20 fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <div class="col-md-6">
-            <button class="btn btn-light btn-lg btn-block play-pause" data-audio="next-memo">
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
               <i class="fas fa-volume-up"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-12 mb-custom">
-    <div class="card wiggle mb-custom">
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-19~1500.webp" alt="Image"
-          class="card-img-top rounded-20 fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <div class="col-md-6">
-            <button class="btn btn-light btn-lg btn-block play-pause" data-audio="next-memo">
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
               <i class="fas fa-volume-up"></i>
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-8 col-md-6 mx-auto mb-custom" style="transform: rotate(4deg);">Element 2
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break -------------------------->
-  <div class="row">
-    <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red; transform: rotate(-5deg);">Element 1
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+    <div class="row">
+      <div class="col-8 mx-auto">
+        <h2>the next memo A memo from Steve Jobs on the value of the individual contributor when given uninterrupted
+          time to craft quality products.
+        </h2>
+      </div>
+      <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">
+        <div class="image-container position-relative image-card">
+          <img src="https://book.stevejobsarchive.com/photos/photo-19~1500.webp" alt="Image"
+            class="card-img-top rounded-20 fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <div class="col-md-6">
+              <button class="btn btn-light btn-lg btn-block play-pause" data-audio="next-memo">
+                <i class="fas fa-volume-up"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break -------------------------->
-  <div class="row">
-    <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red; transform: rotate(4deg);">Element 1
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+    <!-- break   -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto mb-custom" style="transform: rotate(-5deg);">Element 1
+        <div class="image-container position-relative">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in image-card">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-light btn-lg play-pause" data-audio="audio-1">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break -------------------------->
-  <!-- break -------------------------->
-  <div class="row">
-    <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 1
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+    <!-- break   -------------------------->
+    <!-- break -------------------------->
+    <div class="row">
+      <div class="col-8 mx-auto">
+        <h2>the next memo A memo from Steve Jobs on the value of the individual contributor when given uninterrupted
+          time to craft quality products.
+        </h2>
+      </div>
+      <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">
+        <div class="image-container position-relative">
+          <img src="https://book.stevejobsarchive.com/photos/photo-19~1500.webp" alt="Image"
+            class="card-img-top rounded-20 fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <div class="col-md-6">
+              <button class="btn btn-light btn-lg btn-block play-pause" data-audio="next-memo">
+                <i class="fas fa-volume-up"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- break -------------------------->
-  <!-- break -------------------------->
-  <div class="row">
-    <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 1
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- break -------------------------->
-  <!-- break -------------------------->
-  <div class="row">
-    <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 1
-      <div class="image-container position-relative">
-        <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image" class="card-img-top fade-in">
-        <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- break -->
-  <div class="row">
-    <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 2</div>
-  </div>
-  <!-- break -->
-  <div class="row">
-    <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 3</div>
-  </div>
-  <div class="row">
-    <p>
-      human - music - steve faves medley (acoustic guitar) recorded on iPhone Garage Band Andrew Yu<br>
-      ai - voice synthesis @elevenslab<br>
-      collab - gpt4 - engineering Andrew Yu, GPT4.<br>
-
-    </p>
-  </div>
-  <!-- break -->
-  <!-- break -->
-  <!-- break -------------------------->
-  <!-- break -------------------------->
-  <!-- break -------------------------->
-  <!-- break -------------------------->
-  <!-- break -------------------------->
-  <div class="row">
     <div class="col-md-12 mb-custom">
       <div class="card wiggle mb-custom">
         <div class="image-container position-relative">
-          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+          <img src="https://book.stevejobsarchive.com/photos/photo-19~1500.webp" alt="Image"
             class="card-img-top rounded-20 fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <div class="col-md-6">
+              <button class="btn btn-light btn-lg btn-block play-pause" data-audio="next-memo">
+                <i class="fas fa-volume-up"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8 col-md-6 mx-auto mb-custom" style="transform: rotate(4deg);">Element 2
+        <div class="image-container position-relative">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
           <div class="overlay d-flex align-items-center justify-content-center">
             <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
           </div>
         </div>
       </div>
+    </div>
+    <!-- break -------------------------->
+    <div class="row">
+      <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red; transform: rotate(-5deg);">Element 1
+        <div class="image-container position-relative">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- break -------------------------->
+    <div class="row">
+      <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red; transform: rotate(4deg);">Element 1
+        <div class="image-container position-relative">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- break -------------------------->
+    <!-- break -------------------------->
+    <div class="row">
+      <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 1
+        <div class="image-container position-relative">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- break -------------------------->
+    <!-- break -------------------------->
+    <div class="row">
+      <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 1
+        <div class="image-container position-relative">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- break -------------------------->
+    <!-- break -------------------------->
+    <div class="row">
+      <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 1
+        <div class="image-container position-relative">
+          <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
+            class="card-img-top fade-in">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- break -->
+    <div class="row">
+      <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 2</div>
+    </div>
+    <!-- break -->
+    <div class="row">
+      <div class="col-8 col-md-6 mx-auto mb-custom" style="background-color: red">Element 3</div>
+    </div>
+    <div class="row">
+      <p>
+        human - music - steve faves medley (acoustic guitar) recorded on iPhone Garage Band Andrew Yu<br>
+        ai - voice synthesis @elevenslab<br>
+        collab - gpt4 - engineering Andrew Yu, GPT4.<br>
+
+      </p>
+    </div>
+    <!-- break -->
+    <!-- break -->
+    <!-- break -------------------------->
+    <!-- break -------------------------->
+    <!-- break -------------------------->
+    <!-- break -------------------------->
+    <!-- break -------------------------->
+    <div class="row">
       <div class="col-md-12 mb-custom">
         <div class="card wiggle mb-custom">
           <div class="image-container position-relative">
-            <img src="https://book.stevejobsarchive.com/photos/photo-14~1500.webp" alt="Image"
+            <img src="https://book.stevejobsarchive.com/photos/photo-33~1500.webp" alt="Image"
               class="card-img-top rounded-20 fade-in">
             <div class="overlay d-flex align-items-center justify-content-center">
               <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
             </div>
           </div>
         </div>
-        <!-- NEW CARD -->
+        <div class="col-md-12 mb-custom">
+          <div class="card wiggle mb-custom">
+            <div class="image-container position-relative">
+              <img src="https://book.stevejobsarchive.com/photos/photo-14~1500.webp" alt="Image"
+                class="card-img-top rounded-20 fade-in">
+              <div class="overlay d-flex align-items-center justify-content-center">
+                <button class="btn btn-primary play-pause" data-audio="audio-1">Play</button>
+              </div>
+            </div>
+          </div>
+          <!-- NEW CARD -->
+        </div>
       </div>
+
+      <!-- Add more audio elements for each image with unique IDs -->
     </div>
-
-    <!-- Add more audio elements for each image with unique IDs -->
-  </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-        return (
-          rect.top >= 0 &&
-          rect.top <= windowHeight * 0.7 &&
-          rect.bottom >= windowHeight * 0.3
-        );
-      }
-      function fadeInOnScroll() {
-        $('.fade-in').each(function () {
-          if (isElementInViewport(this)) {
-            $(this).addClass('visible');
-          }
-        });
-      }
-      $(window).on('scroll', fadeInOnScroll);
-      fadeInOnScroll(); // Call the function once on page load to handle elements already in the viewport
-    });
-  </script>
-  <script>
-    /*
-    With this code, you add a single event listener to each `.image-container` div. 
-    When the div is clicked, it triggers the click event on the play-pause button inside it. 
-    This approach eliminates the need for `onclick` attributes in the HTML and makes the code more elegant.
-    */
-    document.querySelectorAll('.image-container').forEach(container => {
-      container.addEventListener('click', (event) => {
-        const button = container.querySelector('.play-pause');
-        button.click();
-      });
-    });
-    // Query all play-pause buttons
-    const playPauseButtons = document.querySelectorAll('.play-pause');
-    // Add event listeners to each play-pause button
-    playPauseButtons.forEach(button => {
-      button.addEventListener('click', (event) => {
-        event.stopPropagation(); // Added line to stop event propagation
-        const audioId = button.getAttribute('data-audio');
-        const audio = document.getElementById(audioId);
-        // Toggle play/pause state and update button appearance
-        if (audio.paused && audio.currentTime >= 0 && !audio.ended) {
-          audio.play();
-          button.classList.toggle('playing');
-          progress(button, audio);
-        } else {
-          audio.pause();
-          button.classList.toggle('playing');
-          reset(button, audio);
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+          return (
+            rect.top >= 0 &&
+            rect.top <= windowHeight * 0.7 &&
+            rect.bottom >= windowHeight * 0.3
+          );
         }
-      });
-    });
-    // Create Intersection Observer to detect button visibility
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          // console.log('Button out of viewport:', entry.target.getAttribute('data-audio'));
-          const button = entry.target;
-          const audioId = button.getAttribute('data-audio');
-          const audio = document.getElementById(audioId);
-          audio.pause();
-          button.classList.remove('playing');
-          reset(button, audio);
-        }
-      });
-    });
-    // Observe each play-pause button for visibility changes
-    playPauseButtons.forEach(button => {
-      observer.observe(button);
-    });
-    // Reset function: stop the song, reset its currentTime, and toggle the 'playing' class on the button
-    function reset(btn, song) {
-      if (btn.classList.contains('playing')) {
-        btn.classList.toggle('playing');
-      }
-      song.pause();
-      song.currentTime = 0;
-    }
-    // Progress function: update button's boxShadow to visualize song progress and recursively call itself
-    function progress(btn, song) {
-      setTimeout(function () {
-        var end = song.duration;
-        var current = song.currentTime;
-        var percent = current / (end / 100);
-        if (current == end) {
-          reset(btn, song);
-        }
-        btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
-        progress(btn, song);
-      }, 133.7);
-    }
-    function updateSliderBackground(slider) {
-      const percentage = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-      slider.style.background = `linear-gradient(to right, #3b98fd ${percentage}%, #ccc ${percentage}%)`;
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-      const volumeControl = document.getElementById('volumeControl');
-      updateSliderBackground(volumeControl);
-    });
-
-
-    $(document).ready(function () {
-      var $imageCards = $('.image-card');
-
-      $imageCards.mousemove(function (e) {
-        var $imageCard = $(this);
-        var offsetX = e.pageX - $imageCard.offset().left;
-        var offsetY = e.pageY - $imageCard.offset().top;
-        var width = $imageCard.width();
-        var height = $imageCard.height();
-        var centerX = width / 2;
-        var centerY = height / 2;
-        var moveX = (offsetX - centerX) / centerX * -5;
-        var moveY = (offsetY - centerY) / centerY * -5;
-
-        $imageCard.css('transform', 'scale(1.05) rotate(' + moveX + 'deg) translateY(' + moveY + 'px)');
-      });
-
-      $imageCards.mouseleave(function () {
-        $(this).css('transform', '');
-      });
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-      const lazyLoadElements = document.querySelectorAll(".lazy-load");
-
-      const loadElement = (element) => {
-        if (element.tagName === "IMG") {
-          element.src = element.dataset.src;
-        } else if (element.tagName === "IFRAME") {
-          element.src = element.dataset.src;
-        } else {
-          element.style.backgroundImage = `url(${element.dataset.src})`;
-        }
-      };
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const lazyElement = entry.target;
-              loadElement(lazyElement);
-              observer.unobserve(lazyElement);
+        function fadeInOnScroll() {
+          $('.fade-in').each(function () {
+            if (isElementInViewport(this)) {
+              $(this).addClass('visible');
             }
           });
-        },
-        {
-          rootMargin: "0px 0px 50px 0px",
         }
-      );
+        $(window).on('scroll', fadeInOnScroll);
+        fadeInOnScroll(); // Call the function once on page load to handle elements already in the viewport
+      });
+    </script>
+    <script>
+      /*
+      With this code, you add a single event listener to each `.image-container` div. 
+      When the div is clicked, it triggers the click event on the play-pause button inside it. 
+      This approach eliminates the need for `onclick` attributes in the HTML and makes the code more elegant.
+      */
+      document.querySelectorAll('.image-container').forEach(container => {
+        container.addEventListener('click', (event) => {
+          const button = container.querySelector('.play-pause');
+          button.click();
+        });
+      });
+      // Query all play-pause buttons
+      const playPauseButtons = document.querySelectorAll('.play-pause');
+      // Add event listeners to each play-pause button
+      playPauseButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+          event.stopPropagation(); // Added line to stop event propagation
+          const audioId = button.getAttribute('data-audio');
+          const audio = document.getElementById(audioId);
+          // Toggle play/pause state and update button appearance
+          if (audio.paused && audio.currentTime >= 0 && !audio.ended) {
+            audio.play();
+            button.classList.toggle('playing');
+            progress(button, audio);
+          } else {
+            audio.pause();
+            button.classList.toggle('playing');
+            reset(button, audio);
+          }
+        });
+      });
+      // Create Intersection Observer to detect button visibility
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            // console.log('Button out of viewport:', entry.target.getAttribute('data-audio'));
+            const button = entry.target;
+            const audioId = button.getAttribute('data-audio');
+            const audio = document.getElementById(audioId);
+            audio.pause();
+            button.classList.remove('playing');
+            reset(button, audio);
+          }
+        });
+      });
+      // Observe each play-pause button for visibility changes
+      playPauseButtons.forEach(button => {
+        observer.observe(button);
+      });
+      // Reset function: stop the song, reset its currentTime, and toggle the 'playing' class on the button
+      function reset(btn, song) {
+        if (btn.classList.contains('playing')) {
+          btn.classList.toggle('playing');
+        }
+        song.pause();
+        song.currentTime = 0;
+      }
+      // Progress function: update button's boxShadow to visualize song progress and recursively call itself
+      function progress(btn, song) {
+        setTimeout(function () {
+          var end = song.duration;
+          var current = song.currentTime;
+          var percent = current / (end / 100);
+          if (current == end) {
+            reset(btn, song);
+          }
+          btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+          progress(btn, song);
+        }, 133.7);
+      }
+      function updateSliderBackground(slider) {
+        const percentage = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+        slider.style.background = `linear-gradient(to right, #3b98fd ${percentage}%, #ccc ${percentage}%)`;
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        const volumeControl = document.getElementById('volumeControl');
+        updateSliderBackground(volumeControl);
+      });
 
-      lazyLoadElements.forEach((element) => observer.observe(element));
-    });
+
+      $(document).ready(function () {
+        var $imageCards = $('.image-card');
+
+        $imageCards.mousemove(function (e) {
+          var $imageCard = $(this);
+          var offsetX = e.pageX - $imageCard.offset().left;
+          var offsetY = e.pageY - $imageCard.offset().top;
+          var width = $imageCard.width();
+          var height = $imageCard.height();
+          var centerX = width / 2;
+          var centerY = height / 2;
+          var moveX = (offsetX - centerX) / centerX * -5;
+          var moveY = (offsetY - centerY) / centerY * -5;
+
+          $imageCard.css('transform', 'scale(1.05) rotate(' + moveX + 'deg) translateY(' + moveY + 'px)');
+        });
+
+        $imageCards.mouseleave(function () {
+          $(this).css('transform', '');
+        });
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        const lazyLoadElements = document.querySelectorAll(".lazy-load");
+
+        const loadElement = (element) => {
+          if (element.tagName === "IMG") {
+            element.src = element.dataset.src;
+          } else if (element.tagName === "IFRAME") {
+            element.src = element.dataset.src;
+          } else {
+            element.style.backgroundImage = `url(${element.dataset.src})`;
+          }
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const lazyElement = entry.target;
+                loadElement(lazyElement);
+                observer.unobserve(lazyElement);
+              }
+            });
+          },
+          {
+            rootMargin: "0px 0px 50px 0px",
+          }
+        );
+
+        lazyLoadElements.forEach((element) => observer.observe(element));
+      });
 
 
-    console.log("script loaded");
-    const audio = document.getElementById('backgroundAudio');
-    audio.volume = 0.2;
-    document.getElementById('volumeControl').value = audio.volume * 100;
+      console.log("script loaded");
+      const audio = document.getElementById('backgroundAudio');
+      audio.volume = 0.2;
+      document.getElementById('volumeControl').value = audio.volume * 100;
 
 
-    function playAudio() {
-      audio.play();
-      document.removeEventListener('click', playAudio);
-      console.log("test");
-      document.removeEventListener('touchstart', playAudio);
-    }
+      function playAudio() {
+        audio.play();
+        document.removeEventListener('click', playAudio);
+        console.log("test");
+        document.removeEventListener('touchstart', playAudio);
+      }
 
-    document.getElementById('volumeControl').addEventListener('input', function (event) {
-      audio.volume = event.target.value / 100;
-    });
+      document.getElementById('volumeControl').addEventListener('input', function (event) {
+        audio.volume = event.target.value / 100;
+      });
 
-    document.addEventListener('click', playAudio);
-    document.addEventListener('touchstart', playAudio);
+      document.addEventListener('click', playAudio);
+      document.addEventListener('touchstart', playAudio);
 
-    console.log(`
+      console.log(`
 .                                                                                                                             
   _______ _______     _______ _______ _______ _______     _______ _______ _______     _______ _______ _______ _______ _______ 
   |\     /|\     /|   |\     /|\     /|\     /|\     /|   |\     /|\     /|\     /|   |\     /|\     /|\     /|\     /|\     /|
@@ -669,5 +677,5 @@
 .
 .`);
 
-  </script>
+    </script>
 </body </html>
