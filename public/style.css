@@ -2,13 +2,6 @@
 html, body {
   overflow-x: hidden;
 }
-
-/* Other global styles, such as typography, colors, etc. */
-
-/* Specific styles for components, layout, and other elements */
-
-/* ... rest of your CSS rules ... */
-
 .volumeControlContainer {
   position: fixed;
   top: 10px;
