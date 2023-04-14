@@ -8,7 +8,7 @@
   <title>Something Wonderful.</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/style.css?v=52">
+  <link id="style-link" rel="stylesheet" href="/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -103,13 +103,13 @@
      -->
     <!-- HERE -->
     <p>c1 young steve</p>
-    
+
     <!------------------------------------------------------>
     <!----- CARD NAME:    rainbow
   <!------------------------------------------------------>
     <div class="row">
       <div class="col-8 mx-auto mb-custom">
-        <h2> ===== rainbow full </h2>
+        <h2> ===== rainbow full - "for the trail I know I am leaving" </h2>
         <div class="image-container position-relative image-card">
           <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
           <div class="overlay d-flex align-items-center justify-content-center">
@@ -455,6 +455,11 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+
+    const timestamp = Date.now();
+    document.getElementById('style-link').href += '?v=' + timestamp;
+
+
 
     document.addEventListener("DOMContentLoaded", function () {
       const lazyContainer = document.querySelector("#lazyContainer");
