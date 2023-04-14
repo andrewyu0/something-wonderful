@@ -1,3 +1,13 @@
+/* Global styles */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Other global styles, such as typography, colors, etc. */
+
+/* Specific styles for components, layout, and other elements */
+
+/* ... rest of your CSS rules ... */
 
 .volumeControlContainer {
   position: fixed;
@@ -6,6 +16,8 @@
   transform: translateX(-50%);
   z-index: 999;
   width: 50%;
+
+  overflow: hidden;
 }
 
 
@@ -168,4 +180,24 @@ footer {
 
 .visible {
   opacity: 1;
+}
+
+.c1 {
+  background-color: #f1c40f;
+  overflow:hidden;
+}
+
+.c2 {
+  background-color: #3889D0;
+  overflow:hidden;
+}
+
+.c3 {
+  background-color: #000;
+  overflow:hidden;
+}
+
+.c4 {
+  background-color: #fff;
+  overflow:hidden;
 }
