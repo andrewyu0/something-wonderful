@@ -1,10 +1,16 @@
-#volumeControl {
+
+.volumeControlContainer {
   position: fixed;
-  top: 10px; /* Adjust this value to position the control vertically */
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
-  width: 100px;
+  width: 50%;
+}
+
+
+#volumeControl {
+  width: 100%;
   -webkit-appearance: none;
   appearance: none;
   height: 2px;
@@ -13,23 +19,17 @@
   border-radius: 2px;
 }
 
-
 #volumeControl::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 10px;
-  /* Changed: increased width */
   height: 10px;
-  /* Changed: increased height */
   background: #444;
   cursor: pointer;
   border-radius: 50%;
   background: #fff;
-  /* White circle */
   border: .5px solid #ccc;
-  /* Grey outline */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Circle shadow over the bar */
 }
 
 #volumeControl::-moz-range-thumb {
