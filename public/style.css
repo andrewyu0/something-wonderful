@@ -54,7 +54,7 @@ body {
 
 .fade-in {
   opacity: 0;
-  transition: opacity 4s ease-in;
+  transition: opacity 2.3s ease-in;
 }
 
 .visible {
