@@ -49,8 +49,7 @@
         <div class="volumeControlContainer">
           <input type="range" id="volumeControl" min="0" max="100" step="1" value="50"
             oninput="updateSliderBackground(this)">
-          <audio id="backgroundAudio"
-            src="https://somethingwonderful123.s3.amazonaws.com/green2.m4a" loop>
+          <audio id="backgroundAudio" src="https://somethingwonderful123.s3.amazonaws.com/green2.m4a" loop>
           </audio>
         </div>
       </div>
@@ -437,26 +436,6 @@
         threshold: 0.1
       };
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            console.log("Container in view");
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
-              if (xhr.readyState === 4 && xhr.status === 200) {
-                console.log("Content loaded");
-                lazyContainer.innerHTML = xhr.responseText;
-              }
-            };
-            xhr.open("GET", lazyContainer.dataset.src, true);
-            xhr.send();
-
-            observer.unobserve(lazyContainer);
-          }
-        });
-      }, options);
-
-      observer.observe(lazyContainer);
     });
 
     $(document).ready(function () {
@@ -554,11 +533,20 @@
     function updateSliderBackground(slider) {
       const percentage = (slider.value - slider.min) / (slider.max - slider.min) * 100;
       slider.style.background = `linear-gradient(to right, #3b98fd ${percentage}%, #ccc ${percentage}%)`;
+
+      const backgroundAudio = document.getElementById("backgroundAudio");
+      backgroundAudio.volume = slider.value / 100;
     }
+
     document.addEventListener('DOMContentLoaded', () => {
       const volumeControl = document.getElementById('volumeControl');
       updateSliderBackground(volumeControl);
+      // Add touchend event listener for mobile devices
+      volumeControl.addEventListener('change', () => {
+        updateSliderBackground(volumeControl);
+      });
     });
+
 
 
     $(document).ready(function () {
@@ -623,7 +611,7 @@
     function playAudio() {
       audio.play();
       document.removeEventListener('click', playAudio);
-      console.log("test");
+      console.log("-- bg audio playing");
       document.removeEventListener('touchstart', playAudio);
     }
 

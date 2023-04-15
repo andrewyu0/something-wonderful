@@ -9,16 +9,14 @@ html, body {
   transform: translateX(-50%);
   z-index: 999;
   width: 50%;
-
-  overflow: hidden;
+  /* overflow: hidden; */
 }
-
 
 #volumeControl {
   width: 100%;
   -webkit-appearance: none;
   appearance: none;
-  height: 2px;
+  height: 5px; /* Increased height for better visibility on mobile */
   background: #ccc;
   outline: none;
   border-radius: 2px;
@@ -27,30 +25,25 @@ html, body {
 #volumeControl::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 10px;
-  height: 10px;
-  background: #444;
+  width: 20px; /* Increased width for better visibility on mobile */
+  height: 20px; /* Increased height for better visibility on mobile */
+  background: #fff;
   cursor: pointer;
   border-radius: 50%;
-  background: #fff;
-  border: .5px solid #ccc;
+  border: 0.5px solid #ccc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #volumeControl::-moz-range-thumb {
-  width: 10px;
-  /* Changed: increased width */
-  height: 10px;
-  /* Changed: increased height */
+  width: 20px; /* Increased width for better visibility on mobile */
+  height: 20px; /* Increased height for better visibility on mobile */
   background: #fff;
   cursor: pointer;
   border-radius: 50%;
-  border: .5px solid #ccc;
-  /* Grey outline */
+  border: 0.5px solid #ccc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Circle shadow over the bar */
-
 }
+
 
 body {
   background-color: #646464;
