@@ -58,7 +58,8 @@ body {
 
 body {
   background-color: #646464;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
   color: white !important;
 }
 
@@ -161,8 +162,7 @@ footer {
   border-right: 4px solid #fff;
   z-index: 9;
 
-  -webkit-transform: translate(-50%, 0%) rotate(45deg);
-  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  
 
   -webkit-animation: fade_move_down 4s ease-in-out infinite;
   -moz-animation: fade_move_down 4s ease-in-out infinite;
@@ -347,8 +347,25 @@ footer {
   font-size: 40px;
 }
 
+.serif-text-sm {
+  font-family: 'Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+
 @media (max-width: 576px) { /* Adjust the value based on your desired mobile breakpoint */
   .custom-height {
     height: 80vh; /* Replace 50 with your desired percentage */
   }
+}
+
+.overlay-link {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  color: #424141;
+  text-decoration: none;
+  font-size: 10px;
+
 }
