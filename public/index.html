@@ -47,7 +47,7 @@
     <div class="row">
       <div class="col-8 col-md-6 mx-auto">
         <div class="volumeControlContainer">
-          <input type="range" id="volumeControl" min="0" max="100" step="1" value="50"
+          <input type="range" id="volumeControl" class="d-none d-md-block" min="0" max="100" step="1" value="50"
             oninput="updateSliderBackground(this)">
           <audio id="backgroundAudio" src="https://somethingwonderful123.s3.amazonaws.com/green2.m4a" loop>
           </audio>
@@ -520,7 +520,7 @@
         if (current == end) {
           reset(btn, song);
         }
-        btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+        btn.style.boxShadow = "inset " + btn.offsetWidth * (percent / 100) + "px 0px 0px 0px #646464"
         progress(btn, song);
       }, 133.7);
     }
@@ -585,6 +585,8 @@
         updateSliderBackground(volumeControl);
       });
     });
+
+    
 
 
     $(document).ready(function () {
