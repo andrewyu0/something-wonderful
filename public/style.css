@@ -20,6 +20,10 @@ html, body {
   background: #ccc;
   outline: none;
   border-radius: 2px;
+
+  touch-action: none; 
+  /* In this case, using `touch-action: none;` ensures that the mobile browser doesn't scroll the page or zoom when the user interacts with the slider, allowing the custom slider behavior to work as expected.
+*/ 
 }
 
 #volumeControl::-webkit-slider-thumb {

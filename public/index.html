@@ -421,23 +421,17 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-
+    const isTouchDevice = 'ontouchstart' in document.documentElement;
     const timestamp = Date.now();
     document.getElementById('style-link').href += '?v=' + timestamp;
-
-
-
     document.addEventListener("DOMContentLoaded", function () {
       const lazyContainer = document.querySelector("#lazyContainer");
-
       const options = {
         root: null,
         rootMargin: "0px",
         threshold: 0.1
       };
-
     });
-
     $(document).ready(function () {
       function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
@@ -530,6 +524,22 @@
         progress(btn, song);
       }, 133.7);
     }
+
+
+    /* 
+     * slider control goodies
+     attempts tried log 4/14 10pm
+     - input event listener for both desktop and mobile devises
+     - setting a global constant for ismobiledevice
+     - mousedown
+     - touchstart event listener
+     - change instead of input
+     - pointer events to handle moue/touch interactions
+     - separate handlers for mouse/touch events
+
+     */
+
+
     function updateSliderBackground(slider) {
       const percentage = (slider.value - slider.min) / (slider.max - slider.min) * 100;
       slider.style.background = `linear-gradient(to right, #3b98fd ${percentage}%, #ccc ${percentage}%)`;
@@ -538,15 +548,43 @@
       backgroundAudio.volume = slider.value / 100;
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const volumeControl = document.getElementById('volumeControl');
+    function handleMouseInput(e, slider) {
+      const rect = slider.getBoundingClientRect();
+      const width = rect.width;
+      const valueToShow = ((e.clientX - rect.left) / width) * (slider.max - slider.min) + parseFloat(slider.min);
+
+      slider.value = valueToShow;
+      updateSliderBackground(slider);
+    }
+
+    function handleTouchInput(e, slider) {
+      e.preventDefault();
+      const rect = slider.getBoundingClientRect();
+      const width = rect.width;
+      const valueToShow = ((e.touches[0].clientX - rect.left) / width) * (slider.max - slider.min) + parseFloat(slider.min);
+
+      slider.value = valueToShow;
+      updateSliderBackground(slider);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const volumeControl = document.getElementById("volumeControl");
       updateSliderBackground(volumeControl);
-      // Add touchend event listener for mobile devices
-      volumeControl.addEventListener('change', () => {
+
+      volumeControl.addEventListener("input", () => {
+        updateSliderBackground(volumeControl);
+      });
+
+      volumeControl.addEventListener("touchend", (e) => {
+        e.preventDefault();
+        const rect = volumeControl.getBoundingClientRect();
+        const width = rect.width;
+        const valueToShow = ((e.changedTouches[0].clientX - rect.left) / width) * (volumeControl.max - volumeControl.min) + parseFloat(volumeControl.min);
+
+        volumeControl.value = valueToShow;
         updateSliderBackground(volumeControl);
       });
     });
-
 
 
     $(document).ready(function () {
