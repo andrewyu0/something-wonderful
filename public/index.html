@@ -15,138 +15,121 @@
 </head>
 
 <body>
-  <audio id="" src=""></audio>
-  <audio id="" src=""></audio>
-  <audio id="" src=""></audio>
-  <audio id="" src=""></audio>
-  <!------------------------------------------------------>
-  <!---------------- AUDIO FILES
-  <!------------------------------------------------------>
-  <audio id="music" src="https://somethingwonderful123.s3.amazonaws.com/steve/music-crying.mp3"></audio>
-  <audio id="rainbow-full" src="https://somethingwonderful123.s3.amazonaws.com/steve/rainbow-blaze-full.mp3"></audio>
-  <audio id="golden" src="https://somethingwonderful123.s3.amazonaws.com/steve/golden-age.mp3"></audio>
-  <audio id="generation" src="https://somethingwonderful123.s3.amazonaws.com/steve/art-hewhoseegenerations.mp3"></audio>
-  <audio id="story" src="https://somethingwonderful123.s3.amazonaws.com/steve/30sec-life-story.mp3"></audio>
-  <audio id="excellence"
-    src="https://somethingwonderful123.s3.amazonaws.com/steve/--aristotle-excellence-best.mp3"></audio>
-  <audio id="career" src="https://somethingwonderful123.s3.amazonaws.com/steve/career-long.mp3"></audio>
-  <audio id="meet" src="https://somethingwonderful123.s3.amazonaws.com/steve/meet-people-courageclarity.mp3"></audio>
-  <audio id="starting-apple" src="https://somethingwonderful123.s3.amazonaws.com/steve/starting-apple-1min.mp3"></audio>
-  <audio id="poem" src="https://somethingwonderful123.s3.amazonaws.com/steve/--poem-awake-awake.mp3"></audio>
-  <audio id="audio-1" src="https://somethingwonderful123.s3.amazonaws.com/blaze+best.mp3"></audio>
-  <audio id="next-memo" src="https://somethingwonderful123.s3.amazonaws.com/next-memo.mp3"></audio>
-
-
-  <!------------------------------------------------------>
-  <!---------------- top container 0 - slider, video,foreword
-  <!------------------------------------------------------>
-  <div class="container-fluid">
-    <!------------------------------------------------------>
-    <!---------------- music slider
-    <!------------------------------------------------------>
-    <div class="row">
-      <div class="col-8 col-md-6 mx-auto">
-        <div class="volumeControlContainer">
-          <input type="range" id="volumeControl" class="d-none d-md-block" min="0" max="100" step="1" value="50"
-            oninput="updateSliderBackground(this)">
-          <audio id="backgroundAudio" src="https://somethingwonderful123.s3.amazonaws.com/green2.m4a" loop>
-          </audio>
-        </div>
-      </div>
-    </div>
-    <!------------------------------------------------------>
-    <!---------------- handwritten video
-    <!------------------------------------------------------>
-    <div class="row">
-      <div class="col-12 col-md-8 mx-auto">
-        <div class="embed-responsive embed-responsive-4by3">
-          <video class="embed-responsive-item" autoplay muted loop playsinline>
-            <source src="https://somethingwonderful123.s3.amazonaws.com/trim.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </div>
-    <!------------------------------------------------------>
-    <!---------------- text area
-    <!------------------------------------------------------>
-    <div class="row">
-      <div class="col-8 mx-auto mb-custom">
-        <h1 class="my-5 text-center">Something <br>Wonderful.</h1>
-        <p class="lead text-center mb-5">
-          A human-AI collaboration tribute to Steve Jobs, in the continued spirit of the <a
-            href="https://book.stevejobsarchive.com/" target="_blank">Steve Jobs Archive</a>.
-        </p>
+  <div class="row">
+    <div class="col-8 col-md-6 mx-auto">
+      <div class="volumeControlContainer">
+        <input type="range" id="volumeControl" class="d-none d-md-block" min="0" max="100" step="1" value="50"
+          oninput="updateSliderBackground(this)">
+        <audio id="backgroundAudio" src="https://somethingwonderful123.s3.amazonaws.com/green2.m4a" loop>
+        </audio>
       </div>
     </div>
   </div>
-  <!------------------------------------------------------>
-  <!---------------- chevron directing
-    <!------------------------------------------------------>
+  <div class="row">
+    <div class="col-12 col-md-8 mx-auto">
+      <div class="embed-responsive embed-responsive-4by3">
+        <video class="embed-responsive-item" autoplay muted loop playsinline>
+          <source src="https://somethingwonderful123.s3.amazonaws.com/trim.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col 12">
+      <p class="lead text-center">A human + AI collaboration tribute to Steve Jobs.<br>
+        Inspired by <a href="https://book.stevejobsarchive.com/" target="_blank"><i>Make Something Wonderful</i></a>.
+      </p>
+    </div>
+  </div>
   <div class="row">
     <div class="col-12 mx-auto mb-custom">
       <div class="chevron-container">
-        <div class="chevron-text">Tap images to play audio</div>
-        <br>
-        <div class="chevron"></div>
+        <div class="scroll-down"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10 mx-auto mb-custom" style="transform: rotate(0deg);">
+      <div class="image-container position-relative image-card">
+        <img src="https://book.stevejobsarchive.com/photos/photo-60~1500.webp" class="card-img-top fade-in">
+        <div class="overlay d-flex align-items-center justify-content-center">
+          <button class="btn btn-light btn-lg play-pause" data-audio="excellence">
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***************************************
+                    quick instructions
+       ***************************************             
+   -->
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <div class="lds-ripple ">
+        <div></div>
+        <div></div>
       </div>
     </div>
   </div>
 
-
-  <div class="container-fluid c1" id="lazyContainer">
-    <!-- PART 1 ################################################## -->
-    <!-- young steve 
-          - rainbow
-          - poem
-     -->
-    <!-- HERE -->
-    <p>c1 young steve</p>
-    <div class="row">
-      <div class="col-8 mx-auto mb-custom">
-        <h2> ===== rainbow full - "for the trail I know I am leaving" </h2>
-        <div class="image-container position-relative image-card">
-          <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
-          <div class="overlay d-flex align-items-center justify-content-center">
-            <button class="btn btn-light btn-lg play-pause" data-audio="rainbow-full">
-              <i class="fas fa-volume-up"></i>
-            </button>
-          </div>
+  <div class="row">
+    <div class="col">
+      <p class="serif-text text-center"> tap images to hear audio </p>
+    </div>
+  </div>
+  
+  <!-- ***************************************
+                    PART 1
+       ***************************************             
+   -->
+  <div class="container-fluid c1"></div>
+  <div class="row">
+    <div class="col-8 mx-auto mb-custom">
+      <h2> rainbow full - "for the trail I know I am leaving" </h2>
+      <div class="image-container position-relative image-card">
+        <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
+        <div class="overlay d-flex align-items-center justify-content-center">
+          <button class="btn btn-light btn-lg play-pause" data-audio="rainbow-full">
+            <i class="fas fa-volume-up"></i>
+          </button>
         </div>
       </div>
     </div>
-    <!------------------------------------------------------>
-    <!----- music - list out the song names here - take 2-3 
+  </div>
   <!------------------------------------------------------>
-    <div class="row">
-      <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">
-        <h2> ===== music </h2>
-        <div class="image-container position-relative image-card">
-          <img src="https://book.stevejobsarchive.com/photos/photo-21~1500.webp" alt="" class="card-img-top fade-in">
-          <div class="overlay d-flex align-items-center justify-content-center">
-            <button class="btn btn-light btn-lg play-pause" data-audio="music">
-              <i class="fas fa-volume-up"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!------------------------------------------------------>
-    <!----- dont be a career <<<<
+  <!----- music - list out the song names here - take 2-3 
   <!------------------------------------------------------>
-    <div class="row">
-      <div class="col-8 mx-auto mb-custom">
-        <h2> Don't be a career. </h2>
-        <div class="image-container position-relative image-card">
-          <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
-          <div class="overlay d-flex align-items-center justify-content-center">
-            <button class="btn btn-light btn-lg play-pause" data-audio="career">
-              <i class="fas fa-volume-up"></i>
-            </button>
-          </div>
+  <div class="row">
+    <div class="col-8 mx-auto mb-custom" style="transform: rotate(2deg);">
+      <h2> ---- music </h2>
+      <div class="image-container position-relative image-card">
+        <img src="https://book.stevejobsarchive.com/photos/photo-21~1500.webp" alt="" class="card-img-top fade-in">
+        <div class="overlay d-flex align-items-center justify-content-center">
+          <button class="btn btn-light btn-lg play-pause" data-audio="music">
+            <i class="fas fa-volume-up"></i>
+          </button>
         </div>
       </div>
     </div>
+  </div>
+  <!------------------------------------------------------>
+  <!----- dont be a career <<<<
+  <!------------------------------------------------------>
+  <div class="row">
+    <div class="col-8 mx-auto mb-custom">
+      <h2> Don't be a career. </h2>
+      <div class="image-container position-relative image-card">
+        <img src="https://book.stevejobsarchive.com/photos/photo-20~1500.webp" alt="" class="card-img-top fade-in">
+        <div class="overlay d-flex align-items-center justify-content-center">
+          <button class="btn btn-light btn-lg play-pause" data-audio="career">
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
   </div>
   <!------------------------------------------------------>
@@ -308,15 +291,16 @@
   <!----- poem --------------------
   <!------------------------------------------------------>
   <div class="row">
-    <h2>POEM POEM POEM </h2>
-    <div class="col-8 mx-auto mb-custom">
+    <div class="col mx-auto mb-custom">
       <div class="image-container position-relative image-card">
         <img src="https://book.stevejobsarchive.com/photos/photo-42~1500.webp"
           alt="A poem sent to a friend in 1974: Don't waste your life." class="card-img-top fade-in">
         <div class="overlay d-flex align-items-center justify-content-center">
-          <button class="btn btn-light btn-lg play-pause" data-audio="poem">
-            <i class="fas fa-volume-up"></i>
-          </button>
+          <div class="col-6">
+            <button class="btn btn-light btn-block play-pause" data-audio="poem">
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -419,6 +403,19 @@
 
     <!-- Add more audio elements for each image with unique IDs -->
   </div>
+  <audio id="music" src="https://somethingwonderful123.s3.amazonaws.com/steve/music-crying.mp3"></audio>
+  <audio id="rainbow-full" src="https://somethingwonderful123.s3.amazonaws.com/steve/rainbow-blaze-full.mp3"></audio>
+  <audio id="golden" src="https://somethingwonderful123.s3.amazonaws.com/steve/golden-age.mp3"></audio>
+  <audio id="generation" src="https://somethingwonderful123.s3.amazonaws.com/steve/art-hewhoseegenerations.mp3"></audio>
+  <audio id="story" src="https://somethingwonderful123.s3.amazonaws.com/steve/30sec-life-story.mp3"></audio>
+  <audio id="excellence"
+    src="https://somethingwonderful123.s3.amazonaws.com/steve/--aristotle-excellence-best.mp3"></audio>
+  <audio id="career" src="https://somethingwonderful123.s3.amazonaws.com/steve/career-long.mp3"></audio>
+  <audio id="meet" src="https://somethingwonderful123.s3.amazonaws.com/steve/meet-people-courageclarity.mp3"></audio>
+  <audio id="starting-apple" src="https://somethingwonderful123.s3.amazonaws.com/steve/starting-apple-1min.mp3"></audio>
+  <audio id="poem" src="https://somethingwonderful123.s3.amazonaws.com/steve/--poem-awake-awake.mp3"></audio>
+  <audio id="audio-1" src="https://somethingwonderful123.s3.amazonaws.com/blaze+best.mp3"></audio>
+  <audio id="next-memo" src="https://somethingwonderful123.s3.amazonaws.com/next-memo.mp3"></audio>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     const isTouchDevice = 'ontouchstart' in document.documentElement;
@@ -586,7 +583,7 @@
       });
     });
 
-    
+
 
 
     $(document).ready(function () {
