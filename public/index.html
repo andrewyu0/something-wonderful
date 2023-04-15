@@ -17,6 +17,10 @@
 <body>
   <div class="row">
     <div class="col-8 col-md-6 mx-auto">
+    <!-- ***************************************
+                   volume control
+       ***************************************             
+   -->
       <div class="volumeControlContainer">
         <input type="range" id="volumeControl" class="d-none d-md-block" min="0" max="100" step="1" value="50"
           oninput="updateSliderBackground(this)">
@@ -25,9 +29,13 @@
       </div>
     </div>
   </div>
+  <!-- ***************************************
+      main handwritten video 
+       ***************************************             
+   -->
   <div class="row">
     <div class="col-12 col-md-8 mx-auto">
-      <div class="embed-responsive embed-responsive-4by3">
+      <div class="embed-responsive embed-responsive-4by3 custom-height">
         <video class="embed-responsive-item" autoplay muted loop playsinline>
           <source src="https://somethingwonderful123.s3.amazonaws.com/trim.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -36,17 +44,16 @@
     </div>
   </div>
   <div class="row">
-    <div class="col 12">
-      <p class="lead text-center">A human + AI collaboration tribute to Steve Jobs.<br>
-        Inspired by <a href="https://book.stevejobsarchive.com/" target="_blank"><i>Make Something Wonderful</i></a>.
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 mx-auto mb-custom">
+    <div class="col-12 mx-auto mb-custom text-center">
       <div class="chevron-container">
         <div class="scroll-down"></div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <p class="lead text-center">A human/AI collaboration tribute to Steve Jobs. Inspired by <a href="https://book.stevejobsarchive.com/" target="_blank"><i>Make Something Wonderful</i></a>.
+      </p>
     </div>
   </div>
   <div class="row">
@@ -61,11 +68,11 @@
       </div>
     </div>
   </div>
-  <!-- ***************************************
+<!-- ***************************************
                     quick instructions
        ***************************************             
    -->
-  <div class="row">
+   <div class="row">
     <div class="col d-flex justify-content-center">
       <div class="lds-ripple ">
         <div></div>
@@ -73,12 +80,12 @@
       </div>
     </div>
   </div>
-
   <div class="row">
     <div class="col">
-      <p class="serif-text text-center"> tap images to hear audio </p>
+      <p class="lead text-center"> tap images to hear audio </p>
     </div>
   </div>
+
   
   <!-- ***************************************
                     PART 1
@@ -147,12 +154,7 @@
 
   <div class="container-fluid c2" id="lazyContainer">
 
-    <p>c2 corp </p>
 
-
-    <!------------------------------------------------------>
-    <!----- excellence
-  <!------------------------------------------------------>
     <div class="row">
       <div class="col-10 mx-auto mb-custom">
         <h2> Pixar's Golden Age. </h2>
@@ -308,6 +310,10 @@
   <!------------NEXT MEMO FULL
 <!-------------------------------------->
   <div class="row">
+    <div class="col-8 mx-auto">
+      <h2>test text here
+      </h2>
+    </div>
     <div class="col-8 mx-auto">
       <h2>the next memo A memo from Steve Jobs on the value of the individual contributor when given uninterrupted
         time to craft quality products.
