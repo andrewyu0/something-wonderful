@@ -1,6 +1,6 @@
 # something-wonderful
 
-Live at somethingwonderful.ai
+Live at [somethingwonderful.ai](https://somethingwonderful.ai/)
 
 Steve Jobs Tribute 4/15
 
